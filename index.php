@@ -51,12 +51,14 @@ $posts = [
   <?php foreach($posts as $key => $datapost) { ?>
     <h2><?= $key; ?></h2>
       <?php foreach($datapost as $infopost) { ?>
+        <li>
+          <article>
+            <h3><?= $infopost["title"]; ?></h3>
+            <h4>Autore: <?= $infopost["author"]; ?></h3>
+            <h3><?= $infopost["text"]; ?></h3>
+          </article>
+        </li>
         <?php } ?>
-        <ul>
-          <?php foreach($infopost as $info) { ?>
-            <li> <?= $info ?> </li>
-          <?php } ?>
-        </ul>
   <?php } ?>
 </body>
 </html>
