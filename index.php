@@ -49,16 +49,19 @@ $posts = [
 </head>
 <body>
   <?php foreach($posts as $key => $datapost) { ?>
-    <h2><?= $key; ?></h2>
+    <h2 style="background-color:DodgerBlue;"><?= $key; ?></h2>
+    <ul>
       <?php foreach($datapost as $infopost) { ?>
         <li>
-          <article>
+          <article style="background-color:red;">
             <h3><?= $infopost["title"]; ?></h3>
             <h4>Autore: <?= $infopost["author"]; ?></h3>
             <h3><?= $infopost["text"]; ?></h3>
           </article>
         </li>
         <?php } ?>
+
+    </ul>
   <?php } ?>
 </body>
 </html>
